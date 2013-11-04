@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>tedwon</groupId>
+    <artifactId>kafka</artifactId>
+    <version>0.8.x</version>
+    <packaging>jar</packaging>
+
+    <name>kafka-0.8.x-startup</name>
+    <url>http://tedwon.com</url>
+    <inceptionYear>2013</inceptionYear>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <output.encoding>UTF-8</output.encoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <!-- NOTE: some of these dependecies don't exist in any Maven repo that I could find so you need
+            to sort this out for yourself -->
+        <!-- also define all dependencies needed by the Kafka consumer at runtime -->
+        <dependency>
+            <!-- manual install -->
+            <!--See http://tedwon.com/display/dev/Apache+Kafka#ApacheKafka-InstallKafkatoMavenRepository-->
+            <groupId>kafka</groupId>
+            <artifactId>kafka</artifactId>
+            <version>0.8.0</version>
+            <classifier>beta1</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yammer.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+    </dependencies>
+</project>
