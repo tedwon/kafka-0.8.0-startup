@@ -20,20 +20,14 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.8.0</artifactId>
+            <version>0.8.0-beta1</version>
+        </dependency>
+        <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>2.8.0</version>
-        </dependency>
-        <!-- NOTE: some of these dependecies don't exist in any Maven repo that I could find so you need
-            to sort this out for yourself -->
-        <!-- also define all dependencies needed by the Kafka consumer at runtime -->
-        <dependency>
-            <!-- manual install -->
-            <!--See http://tedwon.com/display/dev/Apache+Kafka#ApacheKafka-InstallKafkatoMavenRepository-->
-            <groupId>kafka</groupId>
-            <artifactId>kafka</artifactId>
-            <version>0.8.0</version>
-            <classifier>beta1</classifier>
         </dependency>
         <dependency>
             <groupId>com.101tec</groupId>
@@ -57,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
+            <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
         </dependency>
         <dependency>
